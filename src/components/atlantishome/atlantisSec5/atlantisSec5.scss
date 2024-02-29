@@ -1,0 +1,87 @@
+@import "../../../scss/global.scss";
+
+.atlantisSec5{
+    .register-benefits{
+        .imgWith-bookbtn{
+            position: relative;
+            margin: 70px 0;
+            .slider-banner{
+                margin: 50px 0px;
+                width: 100%;
+                @include flex-center-center;
+                img{
+                    width: 1280px;
+                    height: 382px;
+                    object-fit: cover;
+                    filter: brightness(60%);
+                    place-items: center;
+                }
+                .info-img{
+                    padding: 30px;
+                    position: absolute;
+                    top: 20%;
+                    left: 10%;
+                    max-width: 611px;
+                    h2{
+                        display: flex;
+                        margin: 15px;
+                        @include heading-common-bigger;
+                        color: #fff;
+                    }
+                    p{
+                        display: flex;
+                        @include details-common-bigger;
+                        margin: 15px;
+                        color: #fff;
+                    }
+                    .underline{
+                        display: flex;
+                        margin: 15px;
+                        span{
+                            width: 120px;
+                            border-top: 0.3px solid #fff;
+                        }
+                    }
+                    .button{
+                        border-radius: none;
+                        margin: 15px;
+                            a{
+                                text-decoration: none;
+                                color: #fff;
+                                button{
+                                    font-family: 'Averta';
+                                    border-radius: none;
+                                    height: calc(100% - 0.1px);
+                                    width: 141px;
+                                    font-size: 12px;
+                                    font-weight: 600;
+                                    margin: 7px 0 0 0;
+                                    background-color: #0057b7;
+                                    color: #fff;
+                                    border: 1px solid #0057b7;
+                                    padding: 15px 10px;
+                                }
+                                button:hover{
+                                    border-color: #0032a0;
+                                    background-color: #0032a0;
+                                    transition: 0.3s ease-in-out;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 576px) {
+                    position: initial;
+                    width: 100%;
+                    img{
+                        width: 540px;
+                    }
+                    .infoimg{
+                        position: initial;
+                        width: 100%;
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,505 @@
+@import "../../scss/global.scss";
+
+.head-main{
+    .head{
+        width: 100%;
+        background-color: #0057b7;
+        color: #fff;
+        .top-head{
+            padding: 16px 30px;
+            display: grid;
+            grid-template-columns: 1fr 150px 1fr;
+            .topLeft-head{
+                display: flex;
+                align-items: center;
+                .icon-list{
+                    display: none;
+                }
+                .langSelect{
+                    select{
+                        border: none;
+                        background-color: #0057b7;
+                        color: #fff;
+                        option{
+                            height: 100%;
+                        }
+                    }
+                }
+                .icon-hover{
+                    position: relative;
+                    .number{
+                        display: none;
+                    }
+                }
+                .icon-hover:hover{
+                    .number{
+                        position: absolute;
+                        display: block;
+                        top: 0px;
+                        background-color: #fff;
+                        color: #000;
+                        transform: translateY(100%);
+                        z-index: 99;
+                        a{
+                            @include flex-center-center;
+                            text-decoration: none;
+                            p{
+                                color: #4a4a4a;
+                                width: 150px;
+                                font-size: 12px;
+                                font-weight: 500;
+                            }
+                            .icon-topLeft{
+                                color: #000;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+                .icon-topLeft{
+                    color: #fff;
+                    font-size: 43px;
+                    padding: 15px;
+                    margin: 2px 0px 0px;
+                    display: flex;
+                    align-items: center;
+                }
+                .destination-hover{
+                    position: relative;
+                    max-width: 145px;
+                    .hover-location{
+                        display: none;
+                        .topArrow{
+                            position: absolute;
+                            top: -5px;
+                            left: 55px;
+                            display: block;
+                            background-color: #fff;
+                            width: 20px;
+                            height: 20px;
+                            transform: rotate(45deg);
+                        }
+                    }
+                    a{
+                        @include flex-center-center;
+                        text-decoration: none;
+                        color: #fff;
+                        font-weight: 200;
+                        font-size: 11px;
+                    }
+                    &::after{
+                        content: '';
+                        width: 0px;
+                        height: 0.5px;
+                        background-color: #fff;
+                        display: block;
+                        transition: 0.3s ease-in-out;
+                    }
+                    &:hover::after{
+                        display: block;
+                        width: 100%;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+                .destination-hover:hover{
+                    .hover-location{
+                        width: 200px;
+                        margin: 20px;
+                        z-index: 9;
+                        transition: 0.3s ease-in-out;
+                        background-color: #fff;
+                        position: absolute;
+                        display: block;
+                        top: 20px;
+                        padding: 10px 50px 10px 10px;
+                        p{
+                            padding: 10px 10px;
+                            font-size: medium;
+                            color: #4a4a4a;
+                        }
+                        a{
+                            width: 120px;
+                            padding: 10px 10px;
+                            display: block;
+                            background-color: none;
+                            color: #4a4a4a;
+                            font-size: 12px;
+                            font-weight: 400;
+                            &::after{
+                                content: '';
+                                width: 0px;
+                                height: 0.5px;
+                                background-color: #4a4a4a;
+                                display: block;
+                                transition: 0.3s ease-in-out;
+                            }
+                            &:hover::after{
+                                display: block;
+                                width: 100%;
+                                transition: 0.3s ease-in-out;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 576px) {
+                    max-width: 576px;
+                    .langSelect, .icon-hover, .icon-topLeft, .destination-hover{
+                        display: none;
+                    }
+                    .icon-list{
+                        display: block;
+                        @include flex-center-center;
+                    }
+                }
+            }
+            .mid-head{
+                margin: 0 150px 0 0;
+                img{
+                    width: 142px;
+                    margin: 0 auto;
+                }
+                @media (max-width: 576px) {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            .right-head{
+                display: flex;
+                justify-content: flex-end;
+                button{
+                    width: 132px;
+                    margin: 0 0 0 15px;
+                    padding: 12px 15px;
+                    border-radius: 0%;
+                    font-size: 12px;
+                    font-weight: 600;
+                    border: none;
+                }
+            }
+            @media (max-width: 576px) {
+                max-width: 576px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        .bot-head{
+            nav{
+                padding: 0.6px ;
+                position: relative;
+                border-top: 1px solid #5e5ebd;
+                margin: 0 20px;
+                @include flex-center-center;
+                .infoAtlantis{
+                    margin: 10px 40px;
+                    a{
+                        padding: 10px 0;
+                        font-size: 13.5px;
+                        letter-spacing: 0.5px;
+                        position: relative;
+                        text-decoration: none;
+                        color: #fff;
+                        text-transform: uppercase;
+                        &::after{
+                            content: '';
+                            width: 0px;
+                            height: 0.5px;
+                            background-color: #fff;
+                            display: block;
+                            transition: 0.3s ease-in-out;
+                        }
+                        &:hover::after{
+                            display: block;
+                            width: 100%;
+                            transition: 0.3s ease-in-out;
+                        }
+                    }
+                    .atlantis-menu{
+                        z-index: 1;
+                        overflow-y: auto;
+                        position: absolute;
+                        display: none;
+                        margin: 0px auto;
+                        max-height: calc(100vh - 114px);
+                        width: 970px;
+                        background-color: #0057b7;
+                        transition: 0.3s ease-in-out;
+                        border-top: 1px solid #598abf;
+                        .menuBox{
+                            max-height: calc(100vh - 114px);
+                            display: grid;
+                            grid-template-columns: repeat(2,1fr);
+                            padding: 30px 15px 20px 15px;
+                            .offer-menu{
+                                p{
+                                    margin: 15px;
+                                }
+                                .img-info{
+                                    display: flex;
+                                    margin: 15px;
+                                    img{
+                                        width: 70px;
+                                        height: 70px;
+                                    }
+                                    .menuOffer{
+                                        h4{
+                                            margin:  0 15px;
+                                            font-size: 15px;
+                                            font-weight: 400; 
+                                        }
+                                        p{
+                                            font-size: 12px;
+                                            font-weight: 300;
+                                            margin: 0 15px;
+                                        }
+                                    }
+                                }
+                            }
+                            .img-menu{
+                                @include grid-center-2;
+                                gap: 50px;
+                                border-left: 1px solid #598abf;
+                                .img1{
+                                    @include flex-center-center;
+                                    img{
+                                        position: relative;
+                                        object-fit: cover;
+                                        width: 423px;
+                                        height: 223px;
+                                        filter: brightness(50%);
+                                        transition: 1s ease-in-out;
+                                    }
+                                    img:hover{
+                                        transform: scale(1);
+                                        transition: 1s ease-in-out;
+                                    }
+                                    .txt-img{
+                                        position: absolute;
+                                        text-align: center;
+                                        h5{
+                                            font-size: 20px;
+                                            font-weight: 400;
+                                            margin: 15px 25px;
+                                        }
+                                        p{
+                                            margin: 10px;
+                                            font-size: 10px;
+                                            font-weight: 400;
+                                        }
+                                        h4{
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                                .img2{
+                                    @include flex-center-center;
+                                    img{
+                                        position: relative;
+                                        object-fit: cover;
+                                        width: 423px;
+                                        height: 223px;
+                                        filter: brightness(50%);
+                                    }
+                                    .txt-img{
+                                        position: absolute;
+                                        text-align: center;
+                                        h5{
+                                            font-size: 20px;
+                                            font-weight: 400;
+                                            margin: 15px 25px;
+                                        }
+                                        p{
+                                            margin: 10px;
+                                            font-size: 10px;
+                                            font-weight: 400;
+                                        }
+                                        h4{
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .eventBox{
+                            max-height: calc(100vh - 114px);
+                            padding: 50px;
+                            display: grid;
+                            grid-template-columns: repeat(2,1fr);
+                            .event-menu{
+                                display: grid;
+                                grid-template-columns: repeat(2,1fr);
+                                .img-box1{
+                                    h5{
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                    }
+                                    .img-info{
+                                        display: flex;
+                                        align-items: center;
+                                        img{
+                                            width: 70px;
+                                            height: 70px;
+                                            margin: 10px 0px;
+                                        }
+                                        .menuOffer{
+                                            margin: 10px 0px;
+                                            a{
+                                                margin:  0 15px;
+                                                font-size: 12px;
+                                                font-weight: 400; 
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .img-menu{
+                                @include grid-center-2;
+                                gap: 50px;
+                                border-left: 1px solid #598abf;
+                                .img1{
+                                    @include flex-center-center;
+                                    img{
+                                        position: relative;
+                                        object-fit: cover;
+                                        width: 423px;
+                                        height: 223px;
+                                        filter: brightness(50%);
+                                        transition: 1s ease-in-out;
+                                    }
+                                    img:hover{
+                                        transform: scale(1);
+                                        transition: 1s ease-in-out;
+                                    }
+                                    .txt-img{
+                                        position: absolute;
+                                        text-align: center;
+                                        h5{
+                                            font-size: 20px;
+                                            font-weight: 400;
+                                            margin: 15px 25px;
+                                        }
+                                        p{
+                                            margin: 10px;
+                                            font-size: 10px;
+                                            font-weight: 400;
+                                        }
+                                        h4{
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .fourBlock-grid{
+                            max-height: calc(100vh - 114px);
+                            padding: 50px;
+                            @include grid-template-column-four;
+                            .diningBlocks{
+                                padding: 0 50px;
+                                border-left: 1px solid #598abf88;
+                                h5{
+                                    padding-top: 20px;
+                                    font-weight: 400;
+                                    letter-spacing: 2PX;
+                                }
+                                h6{
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    padding-top: 20px;
+                                }
+                                a{
+                                    line-height: 30px;
+                                    color:#98bfe8 ;
+                                }
+                                p{
+                                    line-height: 30px;
+                                    color: #fff;
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                }
+                            }
+                            .diningBlocks:nth-child(1){
+                                border: none;
+                            }
+                        }
+                        .entertainBlocks{
+                            max-height: calc(100vh - 114px);
+                            padding: 0 50px;
+                                h5{
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    letter-spacing: 2PX;
+                                    line-height: 30px;
+                                }
+                                a{
+                                    line-height: 30px;
+                                    color: #98bfe8;
+                                }
+                                p{
+                                    line-height: 30px;
+                                    color: #fff;
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                }
+                            }
+                        .aquaventure-menu{
+                            max-height: calc(100vh - 114px);
+                            .img-info{
+                                display: flex;
+                                align-items: center;
+                                h4{
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                }
+                                p{
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                        .twoBlocks-grid{
+                            max-height: calc(100vh - 114px);
+                            padding: 0 40px;
+                            display: grid;
+                            grid-template-columns: repeat(2,1fr);
+                            .diningBlocks{
+                                padding: 0 0 0 50px;
+                                h4, h5{
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    letter-spacing: 2px;
+                                    line-height: 30px;
+                                }
+                                h4{
+                                    margin-top: 25px;
+                                }
+                                a{
+                                    line-height: 30px;
+                                    font-size: 12px;
+                                }
+                            }
+                            .diningBlocks:nth-child(1){
+                                border-right: 1px solid #598abf88;
+                            }
+                        }   
+                    }
+                }
+                .infoAtlantis:hover .atlantis-menu{
+                    display: block;
+                    max-height: calc(100vh - 114px);
+                    top: 32px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    overflow-y: auto;
+                    margin: 10px auto;
+                    width: 1070px;
+                    background-color: #0057b7;
+                    transition: 1s ease-in-out;
+                }
+            }
+            @media (max-width: 576px) {
+                display: none
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+@import "../../../scss/global.scss";
+
+.atlantisSec9{
+    .foodieSec{
+        .foodieHeading{
+            display: flex;
+            flex-direction: column;
+            .center-head{
+                h2{
+                    @include flex-center-center;
+                    @include heading-common-bigger;
+                }
+            }
+            .underline{
+                @include flex-center-center;
+                margin: 25px auto;
+                span{
+                    width: 120px;
+                    border-top: 0.3px solid #0057b7;
+                }
+            }
+            .info-center{
+                margin: 10px auto;
+                max-width: 450px;
+                text-align: center;
+                @include flex-center-center;
+                @include details-common-bigger;
+            }
+            .button{
+                        display: flex;
+                        justify-content: center;
+                        margin: 20px 0 0 0;
+                        .btn{
+                            button{
+                                height: calc(100% - 0.1px);
+                                width: 141px;
+                                font-size: 12px;
+                                font-weight: 600;
+                                margin: 7px 0 0 0;
+                                background-color: #0057b7;
+                                color: #fff;
+                                border: 1px solid #0057b7;
+                                padding: 15px 10px;
+                                a{
+                                    text-decoration: none;
+                                    color: #fff;
+                                }
+                            }
+                            button:hover{
+                                border-color: #0032a0;
+                                background-color: #0032a0;
+                                transition: 0.3s ease-in-out;
+                            }
+                        }
+            }
+            @media (max-width: 576px) {
+                max-width: 100%;
+                margin: 0 20px;
+            }
+        }
+        .three-foodie-cards{
+            @include head-bet-center;
+            gap: 10px;
+            max-width: 1380px;
+            margin: 30px auto;
+            .img-flx{
+                @include flex-center-center;
+                position: relative;
+                img{
+                    width: 416px;
+                }
+                .abs-log{
+                    @include flex-center-center;
+                    top: 30%;
+                    left: 30%;
+                    position: absolute;
+                    img{
+                        max-width: 194px;
+                    }
+
+                }
+            }
+            .img-flx:nth-child(1){
+                .abs-log{
+                    top: 40%;
+                    left: 25%;
+                    img{
+                        max-width: 195px;
+                    }
+                }
+            }
+            .img-flx:nth-child(3){
+                .abs-log{
+                    top: 35%;
+                    left: 35%;
+                    img{
+                        max-width: 117px;
+                    }
+                }
+            }
+            @media (max-width: 576px) {
+                display: flex;
+                max-width: 560px;
+                overflow-x: scroll;
+            }
+        }
+    }
+}

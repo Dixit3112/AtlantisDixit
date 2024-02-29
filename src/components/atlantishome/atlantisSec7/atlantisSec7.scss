@@ -1,0 +1,126 @@
+@import "../../../scss/global.scss";
+
+.atlantisSec7 {
+    .info-cards-on-bgImg {
+        padding: 100px 0px 0px 100px;
+        background-image: url('../../../assets/images/WHITE-Beach-Lifestyle-LadyInfinityPool-Flipped.webp');
+        background-position: center center;
+        background-attachment: fixed;        
+        .info-unforget-cards {
+            width: 100%;
+            padding: 60px;
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+            gap: 10px;
+            background-color: #f6f6f6;
+            .unforgetMoment {
+                border-top: 1px solid #0057b7;
+                border-bottom: 1px solid #0057b7;
+                @include flex-center-center;
+                flex-direction: column;
+                text-align: center;
+                .center-head {
+                    h2 {
+                        @include flex-center-center;
+                        @include heading-common-bigger;
+                    }
+                }
+                .underline {
+                    @include flex-center-center;
+                    margin: 15px auto;
+
+                    span {
+                        width: 120px;
+                        border-top: 0.3px solid #0057b7;
+                    }
+                }
+                .info-card{
+                    p{
+                        width: 330px;
+                        @include details-common-bigger;
+                    }
+                }
+                @media (max-width: 576px) {
+                    max-width: 550px;
+                    border: none;
+                    text-align: center;
+                    @include flex-center-center;
+                }
+            }
+            .cards{
+                width: 100%;
+                height: 567px;  
+                display: flex;
+                gap: 20px;
+                .card{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    height: 567px;
+                    img{
+                        object-fit: cover;
+                        width: 284px;
+                        height: 426px;
+                    }
+                    .info-card{
+                        display: flex;
+                        flex-direction: column;
+                        margin: 20px 0 0 0;
+                        padding: 10px 0 0;
+                        height: 25%;
+                        h2{
+                            @include heading-common;
+                        }
+                        p{
+                            max-width: 232px;
+                            @include details-common;
+                        }
+                    }
+                    .button{
+                        display: flex;
+                        .btn{
+                            margin: 10px 10px 0 0;
+                            button{
+                                height: calc(100% - 0.1px);
+                                width: 209px;
+                                font-size: 12px;
+                                font-weight: 600;
+                                background-color: #0057b7;
+                                color: #fff;
+                                border: 1px solid #0057b7;
+                                padding: 15px 30px;
+                                a{
+                                    text-decoration: none;
+                                    color: #fff;
+                                }
+                            }
+                            button:hover{
+                                border-color: #0032a0;
+                                background-color: #0032a0;
+                                transition: 0.3s ease-in-out;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 576px) {
+                    width: 500px;
+                    overflow-x: scroll;
+                    margin: 10px auto;
+                    background-color: #fff;
+                }
+            }
+            @media (max-width: 576px) {
+                max-width: 576px;
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 576px) {
+            background-image: none;
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+}

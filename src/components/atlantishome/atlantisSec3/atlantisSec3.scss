@@ -1,0 +1,198 @@
+@import "../../../scss/global.scss";
+
+// .atlanticSec3{
+//     .image-overlap{
+//         margin: 60px 30px;
+//         .newYear-info{
+//             display: flex;
+//             margin: 150px auto;
+//             .dinner{
+//                 text-align: center;
+//                 width: 720px;
+//                 max-height: 500px;
+//                 padding: 60px;
+//                 margin: 0 170px;
+//                 @include flex-column;
+//                 align-items: center;
+//                 box-shadow: 17px 25px 34px rgba(0, 0, 0, 0.152);
+//                 background-color: #0057b7;
+//                 .dinner-info{
+//                     max-width: 450px;
+//                     max-height: 500px;
+//                     // padding: 0 250px 0 0;
+//                     margin: 0px 250px 0 0;
+//                     h2{
+//                         width: 330px;
+//                         @include heading-common-bigger;
+//                         color: #fff;
+//                         margin: 0 0 10px;
+//                     }
+//                     .underline{
+//                         @include flex-center-center;
+//                         margin: 25px 0;
+//                         span{
+//                             width: 120px;
+//                             border-top: 0.3px solid #fff;
+//                         }
+//                     }
+//                     p{
+//                         width: 330px;
+//                         @include details-common-bigger;
+//                         color: #fff;
+//                         margin: 0 0 10px;
+//                     }
+//                     .button{
+//                         display: flex;
+//                         justify-content: center;
+//                         button{
+//                             margin: 7px 10px 0 0;
+//                         }
+//                     }
+//                 }
+//                 @media (max-width: 576px) {
+//                     width: 100%;
+//                     height: 350px;
+//                     order: 2;
+//                     margin: 300px 0px 0px -380px;
+//                     box-shadow: none;
+//                     background-color: none;
+//                 }
+//             }
+//             .enjoy{
+//                 box-shadow: 17px 25px 34px rgba(0, 0, 0, 0.15);
+//                 height: 500px;
+//                 margin: 60px 0 0 -475px;
+//                 img{
+//                     width: 750px;
+//                 }
+//                 @media (max-width: 576px) {
+//                     max-width: 576px;
+//                     order: 1;
+//                     box-shadow: none;
+//                     margin: 0;
+//                     img{
+//                         width: 532px;
+//                         height: 336px;
+//                     }
+//                 }
+//             }
+//             @media (max-width: 576px) {
+//                 width: 100%;
+//                 // background-color: #0057b7;
+//             }
+//         }
+//     }
+// }
+
+.atlantisSec3 {
+  padding: 60px 0px;
+  .img-overLap {
+    .newYear-items {
+      display: flex;
+      margin: 0 auto;
+      .info-galaDinner {
+        @include flex-center-center;
+        flex-direction: column;
+        padding: 60px;
+        width: 720px;
+        height: 450px;
+        background-color: #0057b7;
+        color: #fff;
+        margin: 0 0 0 100px;
+        h4 {
+          max-width: 350px;
+          text-align: center;
+          @include heading-common-bigger;
+          color: #fff;
+        }
+        p {
+          max-width: 400px;
+            @include details-common-bigger;
+          line-height: 30px;
+          color: #fff;
+          text-align: center;
+        }
+        .button {
+          @include flex-center-center;
+          margin-top: 20px;
+          button {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            margin: 7px 10px 0 0;
+            text-align: center;
+          }
+        }
+      }
+      .image {
+        width: 750px;
+        margin: 50px 0px 0px -150px;
+        z-index: 99;
+        img {
+          width: 750px;
+          height: 500px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .atlantisSec3 {
+    padding: 20px 0px;
+    .img-overLap {
+      height: 100%;
+      .newYear-items {
+        display: flex;
+        flex-wrap: wrap;
+        .info-galaDinner {
+          margin: 0;
+          padding: 60px;
+          max-width: 100%;
+          height: 350px;
+          background-color: #0057b7;
+          color: #fff;
+          margin-top: -30px;
+          h4 {
+            margin-top: 30px;
+            max-width: 450px;
+            text-align: center;
+            @include heading;
+            color: #fff;
+          }
+          p {
+            margin-top: 10px;
+            max-width: 450px;
+            @include details-common-bigger;
+            line-height: 30px;
+            color: var(--font-color);
+            text-align: center;
+          }
+          .button {
+            display: flex;
+            margin-top: 10px;
+            button {
+              background-color: transparent;
+              color: var(--font-color);
+              border: 1px solid #fff;
+              text-align: center;
+            }
+          }
+          &:first-child {
+            order: 2;
+          }
+        }
+        .image {
+          max-width: 560px;
+          padding: 0px;
+          margin: 0px;
+          img {
+            margin: 0 12px;
+            width: 550px;
+            height: 450px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

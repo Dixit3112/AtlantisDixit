@@ -1,0 +1,81 @@
+@import "../../../scss/global.scss";
+
+.atlantis-sec2{
+    margin: 0 auto;
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        margin: 20px auto;
+        .card{
+            margin: 0 23px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            img{
+                width: 227.8px;
+                height: 151.86px;
+            }
+            .info-card{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                h2{
+                    @include heading-common;
+                }
+                p{
+                    width: 227px;
+                    @include details-common;
+                }
+            }
+            .button{
+                display: flex;
+                text-align: center;
+                margin: 20px 0 0 0;
+                .btn{
+                    button{
+                        width: 141px;
+                        margin: 7px 0 0 1px;
+                        border: none;
+                        background-color: #0057b7;
+                        color: #fff;
+                        padding: 11px 23px;
+                    }
+                    button:hover{
+                        background-color: #0032a0;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+.atlantis-sec2{
+    max-width: 576px;
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        max-width: 550px;
+        overflow-x: scroll;
+        .card{
+            margin: 0 auto;
+            width: 100%;
+            img{
+                width: 364px;
+                height: 226px;
+            }
+            .info-card{
+                margin: 0 0 0 5px;
+                @include flex-column;
+                width: 450px;
+                h2{
+                    width: 336px;
+                }
+                p{
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+}
+}

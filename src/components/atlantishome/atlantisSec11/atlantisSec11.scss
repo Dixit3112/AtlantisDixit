@@ -1,0 +1,101 @@
+@import "../../../scss/global.scss";
+
+.atlantisProject{
+    .project-info{
+        .img-project-info{
+            @include flex-center-center;
+            position: relative;
+            img{
+                filter: brightness(60%);
+                object-fit: cover;
+                width: 1280px;
+                height: 621px;
+            }
+            .info-project{
+                position: absolute;
+                top: 50%;
+                left: 15%;
+                .foodieHeading{
+                    display: flex;
+                    flex-direction: column;
+                    .center-head{
+                        h2{
+                            margin: 0 0 0 48px;
+                            @include heading-common-bigger;
+                            color: #fff;
+                        }
+                    }
+                    .underline{
+                    display: flex;
+                    margin: 25px 48px;
+                span{
+                    width: 120px;
+                    border-top: 0.3px solid #fbfbfc;
+                }
+                    }
+                    .info-center{
+                    margin: 0px 0px 10px 48px;
+                    max-width: 450px;
+                    @include flex-center-center;
+                    @include details-common-bigger;
+                    color: #fff;
+                    }
+                    .button{
+                        display: flex;
+                        margin: 20px 0 0 48px;
+                        .btn{
+                            button{
+                                height: calc(100% - 0.1px);
+                                width: 141px;
+                                font-size: 12px;
+                                font-weight: 600;
+                                margin: 7px 0 0 0;
+                                background-color: #0057b7;
+                                color: #fff;
+                                border: 1px solid #0057b7;
+                                padding: 15px 10px;
+                                a{
+                                    text-decoration: none;
+                                    color: #fff;
+                                }
+                            }
+                            button:hover{
+                                border-color: #0032a0;
+                                background-color: #0032a0;
+                                transition: 0.3s ease-in-out;
+                            }
+                        }
+                    }
+                    @media (max-width: 576px) {
+                        max-width: 100%;
+                        margin: 0 20px;
+                        text-align: center;
+                        .center-head{
+                            h2{
+                            @include heading-common-bigger;
+                            }
+                        }
+                        .info-center{
+                            @include details-common-bigger;
+                        }
+                        .button{
+                            @include flex-center-center;
+                        }
+                    }
+                }
+                @media (max-width: 576px) {
+                    position: initial;
+                }
+            }
+            @media (max-width: 576px) {
+                width: 576px;
+                position: initial;
+                display: block;
+                margin: 0 auto;
+                img{
+                    width: 96%;
+                }
+            }
+        }
+    }
+}

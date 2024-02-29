@@ -1,0 +1,43 @@
+@import "../../../scss/global.scss";
+
+.atlantisSec1{
+    .dubaiInfo{
+        margin: 0 auto;
+        width: 1280px;
+        padding: 60px 0;
+        @include flex-center-center;
+        text-align: center;
+        .header-center{
+            padding: 60px 0;
+            margin: 0 205px;
+            max-width: 795px;
+            h2{
+                font-size: 32px;
+                font-weight: 400;
+                color: $heading-font-primary-color;
+                font-family: "Atlantis-resort";
+            }
+            p{
+                font-size: 15px;
+                color: #282828;
+                font-family: "Averta";
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        max-width: 576px;
+        .dubaiInfo{
+            width: 100%;
+            .header-center{
+                width: 100%;
+                text-align: center;
+                h2{
+                    width: 536px;
+                }
+                p{
+                    max-width: 536px;
+                }
+            }
+        }
+    }
+}

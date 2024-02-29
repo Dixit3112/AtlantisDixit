@@ -1,0 +1,141 @@
+@import "../../../scss/global.scss";
+
+.atlantisSec6{
+    .offer-cards{
+        margin: 0 auto;
+        .center-head{
+            h2{
+                @include flex-center-center;
+                @include heading-common-bigger;
+            }
+        }
+        .underline{
+            @include flex-center-center;
+            margin: 25px auto;
+            span{
+                width: 120px;
+                border-top: 0.3px solid #0057b7;
+            }
+        }
+        .info-center{
+            margin: 20px auto;
+            max-width: 450px;
+            text-align: center;
+            @include flex-center-center;
+            @include details-common-bigger;
+        }
+        .center-cards{
+            width: 100%;
+            margin: 0 auto;
+            .cards{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 20px;
+                padding: 50px 60px;
+                .card{
+                    max-width: 408px;
+                    margin: 0 0 0 33px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    img{
+                        object-fit: cover;
+                        width: 294px;
+                    }
+                    .info-card{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px 0 0;
+                        height: 100%;
+                        h2{
+                            @include heading-common;
+                        }
+                        p{
+                            @include details-common;
+                        }
+                    }
+                    .button{
+                        display: flex;
+                        margin: 20px 0 0 0;
+                        .btn{
+                            button{
+                                height: calc(100% - 0.1px);
+                                width: 141px;
+                                font-size: 12px;
+                                font-weight: 600;
+                                margin: 7px 0 0 0;
+                                background-color: #0057b7;
+                                color: #fff;
+                                border: 1px solid #0057b7;
+                                padding: 15px 10px;
+                                a{
+                                    text-decoration: none;
+                                    color: #fff;
+                                }
+                            }
+                            button:hover{
+                                border-color: #0032a0;
+                                background-color: #0032a0;
+                                transition: 0.3s ease-in-out;
+                            }
+                            .blue{
+                                width: 141px;
+                                border: 1px solid #0057b7;
+                                margin: 7px 0 0 10px;
+                                background-color: #fff;
+                                color: #0057b7;
+                                padding: 15px 10px;
+                                a{
+                                    text-decoration: none;
+                                    color: #0057b7;
+                                }
+                            }
+                            .blue:hover{
+                                background-color: #0057b7;
+                                a{
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+.atlantisSec6{
+    max-width: 576px;
+    .offer-cards{
+        .center-cards{
+            margin: 0 auto;
+            width: 480px;
+            .cards{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                max-width: 550px;
+                overflow-x: scroll;
+                margin: 0 auto;
+                .card{
+                    width: 100%;
+                    img{
+                        width: 364px;
+                        height: 226px;
+                    }
+                    .info-card{
+                        margin: 0 0 0 5px;
+                        @include flex-column;
+                        width: 450px;
+                        h2{
+                            width: 336px;
+                        }
+                        p{
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}

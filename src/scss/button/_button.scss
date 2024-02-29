@@ -1,0 +1,104 @@
+.button {
+    .button {
+        padding: 12px 24px;
+        white-space: nowrap;
+        display: block;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 18px;
+        height: 42px;
+        border-radius: 99px;
+        font-weight: 400;
+        text-transform: uppercase;
+        transition: .3s ease-in-out;
+        border: 1px solid transparent;
+
+        @media (max-width:576px) {
+            height: 40px;
+            padding: 8px 20px;
+            font-size: 12px;
+            line-height: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    .solid {
+        border: 1px solid;
+
+        &.white {
+            display: inline-block;
+            border: 1px solid;
+
+            &:hover {
+                background-color: #1c3532;
+                color: #fff;
+                border-color: #0f1615;
+                transition: .3s ease-in-out;
+            }
+        }
+
+        &.yellow {
+            color: #fff;
+            background-color: transparent;
+            border-color: var(--theme-white-color);
+
+            &:hover {
+                color: black;
+                background-color: var(--theme-button-hover-background-color);
+                border: 1px solid var(--theme-button-hover-border-color);
+                transition: .3s ease-in-out;
+            }
+        }
+        &.blue{
+            border: 1px solid #0057b7;
+            color: #0057b7;
+            background-color: #fff;
+            &:hover{
+                color: #fff;
+                background-color: #012f60;
+            }
+        }
+
+    }
+
+    .transparent {
+        border: 1px solid transparent;
+        background-color: transparent;
+
+        &.white {
+            background-color: var(--theme-white-color);
+            border-color: var(--theme-white-color);
+
+            &:hover {
+                background-color: var(--theme-button-hover-background-color);
+                border: 1px solid var(--theme-button-hover-border-color);
+                transition: .3s ease-in-out;
+            }
+        }
+
+        &.green {
+            display: inline-block;
+            color: #fff;
+            background-color: #1c3532;
+            border: 1px solid transparent;
+
+            &:hover {
+                background-color: #0f1615;
+                transition: .3s ease-in-out;
+                border-color: transparent;
+            }
+        }
+        &.blue{
+            color: #0057b7;
+            background-color: #fff;
+            &:hover{
+                color: #fff;
+                background-color: #012f60;
+            }
+        }
+
+    }
+}

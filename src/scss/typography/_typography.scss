@@ -1,0 +1,178 @@
+@mixin heading {
+    font-family: 'Atlantis-resort';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 50px;
+    text-align: center;
+    color: $heading-font-primary-color;
+    // margin: 0 0 20px;
+
+    @media (max-width:576px) {
+        font-size: 22px;
+        line-height: 36px;
+        letter-spacing: 0;
+        max-width: 294px;
+        margin: 0 auto 16px;
+    }
+}
+
+@mixin heading-common{
+    line-height: 1.6rem;
+    font-weight: 400;
+    font-size: 22px;
+    color: $heading-font-primary-color;
+    font-family: 'Atlantis-resort';
+
+    @media (max-width: 576px) {
+        font-size: 22px;
+        line-height: 36px;
+    }
+}
+@mixin heading-common-bigger{
+    line-height: 38px;
+    font-weight: 400;
+    font-size: 32px;
+    color: $heading-font-primary-color;
+    font-family: 'Atlantis-resort';
+
+    @media (max-width: 576px) {
+        font-size: 27px;
+        line-height: 36px;
+    }
+}
+
+@mixin details {
+    margin: 0 auto 16px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: .1px;
+    color: var(--theme-color-black);
+    max-width: 881px;
+    display: block;
+
+    @media (max-width:576px) {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: .1px;
+        max-width: 96%;
+        margin: 0 auto 16px;
+    }
+}
+@mixin details-common-bigger{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Averta';
+    color: #282828;
+    @media (max-width: 576px) {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+    }
+}
+@mixin details-common{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Averta';
+    color: #282828;
+    @media (max-width: 576px) {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+    }
+}
+@mixin heading-footer{
+    font-size: 16px;
+    font-weight: 400;
+}
+@mixin header-menu{
+    font-size: 14px;
+}
+@mixin main-heading{
+    font-size: 38px;
+    font-weight: 300;
+}
+@mixin heading-info{
+    font-family: 'Atlantis_Resorts ';
+    font-weight: 400;
+    font-size: 38px;
+    color: #1c3532;
+}
+@mixin heading-on-video{
+    font-family: 'Atlantis_Resorts ';
+    font-weight: 400;
+    font-size: 38px;
+}
+@mixin heading-32{
+    font-family: 'Atlantis_Resorts ';
+    font-size: 32px;
+    font-weight: 400;
+    color: #1c3532;
+}
+@mixin heading-footer{
+    font-family: 'Atlantis_Resorts ';
+    font-size: 16px;
+    font-weight: 400;
+}
+@mixin paragraph-mid{
+    font-family: 'Averta';
+    font-size: 16px;
+    font-weight: 300;
+}
+@mixin paragraph-mid2{
+    font-size: 14px;
+    font-weight: 300px;
+}
+@mixin heading-video{
+    font-family: 'Atlantis_Resorts ';
+    font-size: 24px;
+    font-weight: 400;
+}
+@mixin head-atlantis{
+    font-size: 20px;
+    font-weight: 500;
+}
+@mixin head-all {
+    font-family: 'Atlantis_Resorts ';
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 50px;
+    text-align: center;
+    color: var(--theme-color-black);
+    margin: 0 0 20px;
+
+    @media (max-width:576px) {
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 0;
+        max-width: 294px;
+        margin: 0 auto 16px;
+    }
+}
+
+@mixin info-all {
+    margin: 0 auto 16px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: .1px;
+    color: var(--theme-color-black);
+    max-width: 881px;
+    display: block;
+
+    @media (max-width:576px) {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: .1px;
+        max-width: 96%;
+        margin: 0 auto 16px;
+    }
+}

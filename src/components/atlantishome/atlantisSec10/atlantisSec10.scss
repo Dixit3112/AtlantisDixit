@@ -1,0 +1,100 @@
+@import "../../../scss/global.scss";
+
+.awakenWelness{
+    display: flex;
+    justify-content: center;
+    .imgOverlap{
+        margin: 150px auto;
+        display: flex;
+        .awaken-info{
+            padding: 60px;
+            width: 720px;
+            height: 500px;
+            margin: 0 0 0 670px;
+            background-color: #fff;
+            box-shadow: 17px 25px 34px rgba(0,0,0,0.152);
+            .center-head{
+                @include flex-center-center;
+                h2{
+                    max-width: 330px;
+                    @include heading-common-bigger;
+                }
+            }
+            .underline{
+                margin: 0 0 0 50px;
+                @include flex-center-center;
+                margin: 25px auto;
+                span{
+                    width: 120px;
+                    border-top: 0.01px solid #0057b7;
+                }
+            }
+            .info-center{
+                margin: 20px auto;
+                max-width: 330px;
+                text-align: center;
+                @include details-common-bigger;
+            }
+            .button{
+                @include flex-center-center;
+                margin: 20px 0 0 0;
+                .btn{
+                    button{
+                        height: calc(100% - 0.1px);
+                        width: 141px;
+                        font-size: 12px;
+                        font-weight: 600;
+                        margin: 7px 0 0 0;
+                        background-color: #0057b7;
+                        color: #fff;
+                        border: 1px solid #0057b7;
+                        padding: 15px 10px;
+                        a{
+                            text-decoration: none;
+                            color: #fff;
+                        }
+                    }
+                    button:hover{
+                        border-color: #0032a0;
+                        background-color: #0032a0;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+            @media (max-width: 576px) {
+                max-width: 536px;
+                max-height: 275px;
+                @include flex-center-center;
+                flex-direction: column;
+                box-shadow: none;
+                margin: 0 auto;
+
+            }
+        }
+        .img-video{
+            position: absolute;
+            margin: 100px 0px 0 100px;
+            box-shadow: 17px 25px 34px rgba(0,0,0,0.152);
+            img{
+                width: 750px;
+                height: 500px;
+            }
+            @media (max-width: 576px) {
+                position: initial;
+                max-width: 100%;
+                box-shadow: none;
+                @include flex-center-center;
+                margin: 50px auto;
+                img{
+                    max-width: 536px;
+                    border-radius: 15px;
+                }
+            }
+        }
+        @media (max-width: 576px) {
+            position: initial;
+            display: grid;
+            margin: 30px 0;
+        }
+    }
+}
